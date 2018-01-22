@@ -14,4 +14,4 @@ sock = socket.socket(socket.AF_INET, # Internet
 sock.sendto(MESSAGE, (UDP_IP, UDP_PORT))
 
 data, server = sock.recvfrom(1024)
-print "Answer= ",data
+print "Answer: ",data
