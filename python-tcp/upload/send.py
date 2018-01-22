@@ -13,9 +13,9 @@ print "Image:", TEMP + FILE_NAME
 sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 sock.connect((TCP_IP, TCP_PORT))
 
-fUploadFile = open(TEMP+FILE_NAME, "rb")
-Read = fUploadFile.read(1024)
+UploadFile = open(TEMP+FILE_NAME, "rb")
+Read = UploadFile.read(1024)
 while Read:
     sock.send(Read)
-    sRead = fUploadFile.read(1024)
+    sRead = UploadFile.read(1024)
 print "Sending Completed"
